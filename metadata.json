@@ -1,0 +1,6 @@
+{
+  "name": "Superdrug — Westfield White City",
+  "description": "Experience the flagship Superdrug store at Westfield London White City. Beauty, health, skincare, fragrance, piercing, nails, aesthetics clinic and beauty trends under one roof.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

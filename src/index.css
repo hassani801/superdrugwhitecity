@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-pink: #EC008C;
+    --brand-pink-hover: #d1007b;
+    --brand-black: #231F20;
+    --brand-white: #FFFFFF;
+    --neutral-50: #F8F6F7;
+    --neutral-100: #F3EEF1;
+    --neutral-200: #E8E3E6;
+    --neutral-600: #707070;
+    --neutral-900: #151515;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--brand-black);
+    background-color: var(--brand-white);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Custom marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F6F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #231F20;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EC008C;
+}
+
+/* Smooth clamp typography */
+.hero-title {
+  font-size: clamp(2.75rem, 7.5vw, 6.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 4.25rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+/* Hide scrollbars for carousels while keeping functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
